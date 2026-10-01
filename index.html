@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Energy Data Charts</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<main class="dashboard">
+		<header class="page-header">
+			<div class="header-topline">
+				<p class="eyebrow"><span class="brand-mark" aria-hidden="true"></span> Energy observatory <span class="eyebrow-divider">/</span> 05</p>
+				<p class="header-period"><span class="period-mark" aria-hidden="true"></span> Australian power market <strong>1998-2024</strong></p>
+			</div>
+			<div class="header-main">
+				<div>
+					<h1>Television energy, in context</h1>
+					<p class="page-deck">Screen technology, annual consumption, and the price of power.</p>
+				</div>
+				<div class="header-index" aria-hidden="true"><strong>01-04</strong><span>DATA SERIES</span></div>
+			</div>
+		</header>
+
+		<section class="chart-grid" aria-label="Charts">
+			<article class="chart-panel chart-panel--bar" id="bar-chart" aria-label="Mean annual energy use by screen technology for 55-inch TVs">
+				<header class="chart-panel-heading">
+					<span class="chart-index">01</span>
+					<div class="chart-heading-copy"><p class="chart-kicker">55-INCH SCREENS</p><h2>Mean energy use</h2></div>
+					<span class="chart-unit">kWh / year</span>
+				</header>
+			</article>
+			<article class="chart-panel chart-panel--donut" id="donut-chart" aria-label="Combined annual energy consumption by screen technology across TV models">
+				<header class="chart-panel-heading">
+					<span class="chart-index">02</span>
+					<div class="chart-heading-copy"><p class="chart-kicker">ALL TV SIZES</p><h2>Mean consumption</h2></div>
+					<span class="chart-unit">kWh / year</span>
+				</header>
+			</article>
+			<article class="chart-panel chart-panel--line" id="line-chart" aria-label="Annual average Australian spot power price from 1998 to 2024">
+				<header class="chart-panel-heading">
+					<span class="chart-index">03</span>
+					<div class="chart-heading-copy"><p class="chart-kicker">AUSTRALIAN SPOT MARKET</p><h2>Average power price</h2></div>
+					<span class="chart-unit">$ / MWh</span>
+				</header>
+			</article>
+			<article class="chart-panel chart-panel--scatter" id="scatter-chart" aria-label="TV energy consumption compared with star rating">
+				<header class="chart-panel-heading">
+					<span class="chart-index">04</span>
+					<div class="chart-heading-copy"><p class="chart-kicker">MODEL-LEVEL DATA</p><h2>Consumption vs rating</h2></div>
+					<span class="chart-unit">TV models</span>
+				</header>
+			</article>
+		</section>
+	</main>
+	<script src="https://d3js.org/d3.v7.min.js"></script>
+	<script src="load-data.js"></script>
+	<script src="charts/bar.js"></script>
+	<script src="charts/scatterplot.js"></script>
+	<script src="charts/donut.js"></script>
+	<script src="charts/line.js"></script>
+</body>
+</html>
